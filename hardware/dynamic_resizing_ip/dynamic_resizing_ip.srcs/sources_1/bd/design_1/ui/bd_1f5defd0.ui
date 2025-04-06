@@ -1,0 +1,74 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.21622",
+   "Default View_TopLeft":"-346,-62",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.5.8 2022-09-21 7111 VDI=41 GEI=38 GUI=JA:10.0
+#  -string -flagsOSRD
+preplace port rgb_i -pg 1 -lvl 0 -x -140 -y 90 -defaultsOSRD
+preplace port port-id_clk -pg 1 -lvl 0 -x -140 -y 240 -defaultsOSRD
+preplace port port-id_resetn -pg 1 -lvl 0 -x -140 -y 270 -defaultsOSRD
+preplace port port-id_resetn_sub_image_filter -pg 1 -lvl 0 -x -140 -y 220 -defaultsOSRD
+preplace port port-id_enable_sub_image_filter -pg 1 -lvl 0 -x -140 -y 190 -defaultsOSRD
+preplace port port-id_valid_o_0 -pg 1 -lvl 9 -x 3110 -y 200 -defaultsOSRD
+preplace port port-id_vsync_gen_o_0 -pg 1 -lvl 9 -x 3110 -y 220 -defaultsOSRD
+preplace port port-id_update_0 -pg 1 -lvl 0 -x -140 -y 730 -defaultsOSRD
+preplace portBus data_o_0 -pg 1 -lvl 9 -x 3110 -y 180 -defaultsOSRD
+preplace portBus bot_right_y_0 -pg 1 -lvl 0 -x -140 -y 710 -defaultsOSRD
+preplace portBus bot_right_x_0 -pg 1 -lvl 0 -x -140 -y 690 -defaultsOSRD
+preplace portBus top_left_y_0 -pg 1 -lvl 0 -x -140 -y 670 -defaultsOSRD
+preplace portBus top_left_x_0 -pg 1 -lvl 0 -x -140 -y 650 -defaultsOSRD
+preplace inst sub_image_filter_0 -pg 1 -lvl 1 -x 70 -y 150 -defaultsOSRD
+preplace inst luminance_filter_0 -pg 1 -lvl 2 -x 390 -y 130 -defaultsOSRD
+preplace inst hor_avg_filter_0 -pg 1 -lvl 4 -x 1260 -y 140 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 770 -y 130 -defaultsOSRD
+preplace inst vert_avg_filter_0 -pg 1 -lvl 7 -x 2460 -y 140 -defaultsOSRD
+preplace inst axis_data_fifo_1 -pg 1 -lvl 6 -x 2010 -y 130 -defaultsOSRD
+preplace inst normalizer_0 -pg 1 -lvl 5 -x 1620 -y 140 -defaultsOSRD
+preplace inst normalizer_1 -pg 1 -lvl 8 -x 2880 -y 150 -defaultsOSRD
+preplace inst constant_control_0 -pg 1 -lvl 3 -x 770 -y 680 -defaultsOSRD
+preplace netloc axis_data_fifo_0_m_axis_tdata 1 3 1 980 70n
+preplace netloc axis_data_fifo_0_m_axis_tvalid 1 3 1 990 90n
+preplace netloc axis_data_fifo_1_m_axis_tdata 1 6 1 2270 80n
+preplace netloc axis_data_fifo_1_m_axis_tvalid 1 6 1 2290 100n
+preplace netloc bot_right_x_0_1 1 0 3 NJ 690 NJ 690 NJ
+preplace netloc bot_right_y_0_1 1 0 3 NJ 710 NJ 710 NJ
+preplace netloc clk_1 1 0 8 -90 20 240 20 570 -10 1090 -20 1470 -10 1810 -10 2240 -20 2660
+preplace netloc constant_control_0_botr 1 0 4 -70 270 NJ 270 NJ 270 950
+preplace netloc constant_control_0_dx 1 3 1 980 210n
+preplace netloc constant_control_0_dy 1 3 4 NJ 670 1460 240 N 240 2290
+preplace netloc constant_control_0_factor_h 1 3 5 1030J 660 N 660 N 660 N 660 2690
+preplace netloc constant_control_0_factor_w 1 3 2 1040 680 1420
+preplace netloc constant_control_0_hdim_w 1 3 1 1000 230n
+preplace netloc constant_control_0_topl 1 0 4 -70 -30 NJ -30 NJ -30 960
+preplace netloc constant_control_0_vdim_h 1 3 4 1020J 650 N 650 N 650 2300
+preplace netloc enable_sub_image_filter_1 1 0 1 -100 190n
+preplace netloc hor_avg_filter_0_vid_pReady_i 1 3 2 970 -40 1420
+preplace netloc luminance_filter_0_vid_pData_o 1 2 1 N 110
+preplace netloc luminance_filter_0_vid_pHSync_o 1 2 2 580J 20 1070
+preplace netloc luminance_filter_0_vid_pVDE_o 1 2 1 N 130
+preplace netloc luminance_filter_0_vid_pVSync_o 1 2 2 560J 10 1080
+preplace netloc normalizer_0_vid_pData_o 1 5 1 1780 110n
+preplace netloc normalizer_0_vid_pHSync_o 1 5 3 1770 0 2250 -10 2650
+preplace netloc normalizer_0_vid_pVDE_o 1 5 1 1830 130n
+preplace netloc normalizer_0_vid_pVSync_o 1 5 2 1820 20 2300
+preplace netloc normalizer_1_vid_pData_o 1 8 1 3080 140n
+preplace netloc normalizer_1_vid_pVDE_o 1 8 1 3070 160n
+preplace netloc normalizer_1_vid_pVSync_o 1 8 1 3060 180n
+preplace netloc resetn_1 1 0 8 -80 30 210 30 590 0 1100 -10 1450 10 1800 10 2280 280 2680
+preplace netloc sw_reset_0_1 1 0 8 -110 10 220 -20 N -20 1060 -30 1460 -30 N -30 N -30 2670
+preplace netloc top_left_x_0_1 1 0 3 NJ 650 NJ 650 NJ
+preplace netloc top_left_y_0_1 1 0 3 NJ 670 NJ 670 NJ
+preplace netloc update_0_1 1 0 3 NJ 730 NJ 730 NJ
+preplace netloc vert_avg_filter_0_data_o 1 7 1 2630 90n
+preplace netloc vert_avg_filter_0_valid_o 1 7 1 2640 110n
+preplace netloc vert_avg_filter_0_vid_pReady_i 1 6 2 2260 0 2620
+preplace netloc vert_avg_filter_0_vsync_gen_o 1 7 1 2650 150n
+preplace netloc hor_avg_filter_0_RGB_o 1 4 1 1430 100n
+preplace netloc rgb_i_1 1 0 1 N 90
+preplace netloc sub_image_filter_0_RGB_o 1 1 1 230 100n
+levelinfo -pg 1 -140 70 390 770 1260 1620 2010 2460 2880 3110
+pagesize -pg 1 -db -bbox -sgen -360 -470 3690 820
+"
+}
+0

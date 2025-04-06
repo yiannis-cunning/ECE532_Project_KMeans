@@ -1,0 +1,1086 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8D3FE36E331A7FC6",
+      "device": "xc7a200tsbg484-1",
+      "gen_directory": "../../../../dynamic_resizing_ip.gen/sources_1/bd/design_1",
+      "name": "design_1",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2023.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "sub_image_filter_0": "",
+      "luminance_filter_0": "",
+      "hor_avg_filter_0": "",
+      "axis_data_fifo_0": "",
+      "vert_avg_filter_0": "",
+      "axis_data_fifo_1": "",
+      "normalizer_0": "",
+      "normalizer_1": "",
+      "constant_control_0": ""
+    },
+    "interface_ports": {
+      "rgb_i": {
+        "mode": "Slave",
+        "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+        "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+        "port_maps": {
+          "DATA": {
+            "physical_name": "rgb_i_data",
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "ACTIVE_VIDEO": {
+            "physical_name": "rgb_i_active_video",
+            "direction": "I"
+          },
+          "HSYNC": {
+            "physical_name": "rgb_i_hsync",
+            "direction": "I"
+          },
+          "VSYNC": {
+            "physical_name": "rgb_i_vsync",
+            "direction": "I"
+          }
+        }
+      }
+    },
+    "ports": {
+      "clk": {
+        "direction": "I"
+      },
+      "resetn": {
+        "direction": "I"
+      },
+      "resetn_sub_image_filter": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "enable_sub_image_filter": {
+        "direction": "I"
+      },
+      "valid_o_0": {
+        "direction": "O"
+      },
+      "data_o_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      },
+      "vsync_gen_o_0": {
+        "direction": "O"
+      },
+      "update_0": {
+        "direction": "I"
+      },
+      "bot_right_y_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "bot_right_x_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "top_left_y_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      },
+      "top_left_x_0": {
+        "direction": "I",
+        "left": "15",
+        "right": "0"
+      }
+    },
+    "components": {
+      "sub_image_filter_0": {
+        "vlnv": "xilinx.com:module_ref:sub_image_filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_sub_image_filter_0_0",
+        "xci_path": "ip\\design_1_sub_image_filter_0_0\\design_1_sub_image_filter_0_0.xci",
+        "inst_hier_path": "sub_image_filter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "sub_image_filter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "RGB_i": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_i",
+                "direction": "I",
+                "left": "23",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_i",
+                "direction": "I"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_i",
+                "direction": "I"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_i",
+                "direction": "I"
+              }
+            }
+          },
+          "RGB_o": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_o",
+                "direction": "O",
+                "left": "23",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_o",
+                "direction": "O"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_o",
+                "direction": "O"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_o",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "sw_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "top_left": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "bottom_right": {
+            "direction": "I",
+            "left": "31",
+            "right": "0"
+          },
+          "enable": {
+            "direction": "I"
+          }
+        }
+      },
+      "luminance_filter_0": {
+        "vlnv": "xilinx.com:module_ref:luminance_filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_luminance_filter_0_0",
+        "xci_path": "ip\\design_1_luminance_filter_0_0\\design_1_luminance_filter_0_0.xci",
+        "inst_hier_path": "luminance_filter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "luminance_filter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "RGB_i": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_i",
+                "direction": "I",
+                "left": "23",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_i",
+                "direction": "I"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_i",
+                "direction": "I"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_i",
+                "direction": "I"
+              }
+            }
+          },
+          "RGB_o": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_o",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_o",
+                "direction": "O"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_o",
+                "direction": "O"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_o",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "sw_reset": {
+            "type": "rst",
+            "direction": "I"
+          }
+        }
+      },
+      "hor_avg_filter_0": {
+        "vlnv": "xilinx.com:module_ref:hor_avg_filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_hor_avg_filter_0_0",
+        "xci_path": "ip\\design_1_hor_avg_filter_0_0\\design_1_hor_avg_filter_0_0.xci",
+        "inst_hier_path": "hor_avg_filter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "hor_avg_filter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "RGB_i": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_i",
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_i",
+                "direction": "I"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_i",
+                "direction": "I"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_i",
+                "direction": "I"
+              }
+            }
+          },
+          "RGB_o": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_o",
+                "direction": "O",
+                "left": "23",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_o",
+                "direction": "O"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_o",
+                "direction": "O"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_o",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "vid_pReady_o": {
+            "direction": "O"
+          },
+          "sw_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "dx": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "hdim": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "axis_data_fifo_0": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "ip_revision": "11",
+        "xci_name": "design_1_axis_data_fifo_0_1",
+        "xci_path": "ip\\design_1_axis_data_fifo_0_1\\design_1_axis_data_fifo_0_1.xci",
+        "inst_hier_path": "axis_data_fifo_0",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "64"
+          },
+          "HAS_RD_DATA_COUNT": {
+            "value": "1"
+          },
+          "HAS_WR_DATA_COUNT": {
+            "value": "1"
+          }
+        }
+      },
+      "vert_avg_filter_0": {
+        "vlnv": "xilinx.com:module_ref:vert_avg_filter:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_vert_avg_filter_0_0",
+        "xci_path": "ip\\design_1_vert_avg_filter_0_0\\design_1_vert_avg_filter_0_0.xci",
+        "inst_hier_path": "vert_avg_filter_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "vert_avg_filter",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "RGB_i": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_i",
+                "direction": "I",
+                "left": "7",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_i",
+                "direction": "I"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_i",
+                "direction": "I"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_i",
+                "direction": "I"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "vid_pReady_i": {
+            "direction": "O"
+          },
+          "data_o": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "valid_o": {
+            "direction": "O"
+          },
+          "vsync_gen_o": {
+            "direction": "O"
+          },
+          "dy": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          },
+          "vdim": {
+            "direction": "I",
+            "left": "23",
+            "right": "0"
+          }
+        }
+      },
+      "axis_data_fifo_1": {
+        "vlnv": "xilinx.com:ip:axis_data_fifo:2.0",
+        "ip_revision": "11",
+        "xci_name": "design_1_axis_data_fifo_1_0",
+        "xci_path": "ip\\design_1_axis_data_fifo_1_0\\design_1_axis_data_fifo_1_0.xci",
+        "inst_hier_path": "axis_data_fifo_1",
+        "parameters": {
+          "FIFO_DEPTH": {
+            "value": "32"
+          },
+          "HAS_RD_DATA_COUNT": {
+            "value": "1"
+          },
+          "HAS_WR_DATA_COUNT": {
+            "value": "1"
+          }
+        }
+      },
+      "normalizer_0": {
+        "vlnv": "xilinx.com:module_ref:normalizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_normalizer_0_0",
+        "xci_path": "ip\\design_1_normalizer_0_0\\design_1_normalizer_0_0.xci",
+        "inst_hier_path": "normalizer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "normalizer",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "RGB_i": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_i",
+                "direction": "I",
+                "left": "23",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_i",
+                "direction": "I"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_i",
+                "direction": "I"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_i",
+                "direction": "I"
+              }
+            }
+          },
+          "RGB_o": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_o",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_o",
+                "direction": "O"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_o",
+                "direction": "O"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_o",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "sw_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "factor": {
+            "direction": "I",
+            "left": "16",
+            "right": "0"
+          }
+        }
+      },
+      "normalizer_1": {
+        "vlnv": "xilinx.com:module_ref:normalizer:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_normalizer_1_0",
+        "xci_path": "ip\\design_1_normalizer_1_0\\design_1_normalizer_1_0.xci",
+        "inst_hier_path": "normalizer_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "normalizer",
+          "boundary_crc": "0x0"
+        },
+        "interface_ports": {
+          "RGB_i": {
+            "mode": "Slave",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_i",
+                "direction": "I",
+                "left": "23",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_i",
+                "direction": "I"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_i",
+                "direction": "I"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_i",
+                "direction": "I"
+              }
+            }
+          },
+          "RGB_o": {
+            "mode": "Master",
+            "vlnv_bus_definition": "xilinx.com:interface:vid_io:1.0",
+            "vlnv": "xilinx.com:interface:vid_io_rtl:1.0",
+            "port_maps": {
+              "DATA": {
+                "physical_name": "vid_pData_o",
+                "direction": "O",
+                "left": "7",
+                "right": "0"
+              },
+              "ACTIVE_VIDEO": {
+                "physical_name": "vid_pVDE_o",
+                "direction": "O"
+              },
+              "HSYNC": {
+                "physical_name": "vid_pHSync_o",
+                "direction": "O"
+              },
+              "VSYNC": {
+                "physical_name": "vid_pVSync_o",
+                "direction": "O"
+              }
+            }
+          }
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "sw_reset": {
+            "type": "rst",
+            "direction": "I"
+          },
+          "factor": {
+            "direction": "I",
+            "left": "16",
+            "right": "0"
+          }
+        }
+      },
+      "constant_control_0": {
+        "vlnv": "xilinx.com:module_ref:constant_control:1.0",
+        "ip_revision": "1",
+        "xci_name": "design_1_constant_control_0_0",
+        "xci_path": "ip\\design_1_constant_control_0_0\\design_1_constant_control_0_0.xci",
+        "inst_hier_path": "constant_control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "constant_control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "ASSOCIATED_RESET": {
+                "value": "resetn",
+                "value_src": "constant"
+              }
+            }
+          },
+          "resetn": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "top_left_x": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "top_left_y": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "bot_right_x": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "bot_right_y": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "update": {
+            "direction": "I"
+          },
+          "vsync": {
+            "direction": "I"
+          },
+          "topl": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "botr": {
+            "direction": "O",
+            "left": "31",
+            "right": "0"
+          },
+          "dx": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "dy": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "hdim_w": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "vdim_h": {
+            "direction": "O",
+            "left": "23",
+            "right": "0"
+          },
+          "factor_w": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          },
+          "factor_h": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "interface_nets": {
+      "hor_avg_filter_0_RGB_o": {
+        "interface_ports": [
+          "normalizer_0/RGB_i",
+          "hor_avg_filter_0/RGB_o"
+        ]
+      },
+      "rgb_i_1": {
+        "interface_ports": [
+          "rgb_i",
+          "sub_image_filter_0/RGB_i"
+        ]
+      },
+      "sub_image_filter_0_RGB_o": {
+        "interface_ports": [
+          "sub_image_filter_0/RGB_o",
+          "luminance_filter_0/RGB_i"
+        ]
+      }
+    },
+    "nets": {
+      "axis_data_fifo_0_m_axis_tdata": {
+        "ports": [
+          "axis_data_fifo_0/m_axis_tdata",
+          "hor_avg_filter_0/vid_pData_i"
+        ]
+      },
+      "axis_data_fifo_0_m_axis_tvalid": {
+        "ports": [
+          "axis_data_fifo_0/m_axis_tvalid",
+          "hor_avg_filter_0/vid_pVDE_i"
+        ]
+      },
+      "axis_data_fifo_1_m_axis_tdata": {
+        "ports": [
+          "axis_data_fifo_1/m_axis_tdata",
+          "vert_avg_filter_0/vid_pData_i"
+        ]
+      },
+      "axis_data_fifo_1_m_axis_tvalid": {
+        "ports": [
+          "axis_data_fifo_1/m_axis_tvalid",
+          "vert_avg_filter_0/vid_pVDE_i"
+        ]
+      },
+      "bot_right_x_0_1": {
+        "ports": [
+          "bot_right_x_0",
+          "constant_control_0/bot_right_x"
+        ]
+      },
+      "bot_right_y_0_1": {
+        "ports": [
+          "bot_right_y_0",
+          "constant_control_0/bot_right_y"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "axis_data_fifo_0/s_axis_aclk",
+          "luminance_filter_0/clk",
+          "hor_avg_filter_0/clk",
+          "axis_data_fifo_1/s_axis_aclk",
+          "vert_avg_filter_0/clk",
+          "normalizer_0/clk",
+          "normalizer_1/clk",
+          "constant_control_0/clk",
+          "sub_image_filter_0/clk"
+        ]
+      },
+      "constant_control_0_botr": {
+        "ports": [
+          "constant_control_0/botr",
+          "sub_image_filter_0/bottom_right"
+        ]
+      },
+      "constant_control_0_dx": {
+        "ports": [
+          "constant_control_0/dx",
+          "hor_avg_filter_0/dx"
+        ]
+      },
+      "constant_control_0_dy": {
+        "ports": [
+          "constant_control_0/dy",
+          "vert_avg_filter_0/dy"
+        ]
+      },
+      "constant_control_0_factor_h": {
+        "ports": [
+          "constant_control_0/factor_h",
+          "normalizer_1/factor"
+        ]
+      },
+      "constant_control_0_factor_w": {
+        "ports": [
+          "constant_control_0/factor_w",
+          "normalizer_0/factor"
+        ]
+      },
+      "constant_control_0_hdim_w": {
+        "ports": [
+          "constant_control_0/hdim_w",
+          "hor_avg_filter_0/hdim"
+        ]
+      },
+      "constant_control_0_topl": {
+        "ports": [
+          "constant_control_0/topl",
+          "sub_image_filter_0/top_left"
+        ]
+      },
+      "constant_control_0_vdim_h": {
+        "ports": [
+          "constant_control_0/vdim_h",
+          "vert_avg_filter_0/vdim"
+        ]
+      },
+      "enable_sub_image_filter_1": {
+        "ports": [
+          "enable_sub_image_filter",
+          "sub_image_filter_0/enable"
+        ]
+      },
+      "hor_avg_filter_0_vid_pReady_i": {
+        "ports": [
+          "hor_avg_filter_0/vid_pReady_o",
+          "axis_data_fifo_0/m_axis_tready"
+        ]
+      },
+      "luminance_filter_0_vid_pData_o": {
+        "ports": [
+          "luminance_filter_0/vid_pData_o",
+          "axis_data_fifo_0/s_axis_tdata"
+        ]
+      },
+      "luminance_filter_0_vid_pHSync_o": {
+        "ports": [
+          "luminance_filter_0/vid_pHSync_o",
+          "hor_avg_filter_0/vid_pHSync_i"
+        ]
+      },
+      "luminance_filter_0_vid_pVDE_o": {
+        "ports": [
+          "luminance_filter_0/vid_pVDE_o",
+          "axis_data_fifo_0/s_axis_tvalid"
+        ]
+      },
+      "luminance_filter_0_vid_pVSync_o": {
+        "ports": [
+          "luminance_filter_0/vid_pVSync_o",
+          "hor_avg_filter_0/vid_pVSync_i",
+          "constant_control_0/vsync"
+        ]
+      },
+      "normalizer_0_vid_pData_o": {
+        "ports": [
+          "normalizer_0/vid_pData_o",
+          "axis_data_fifo_1/s_axis_tdata"
+        ]
+      },
+      "normalizer_0_vid_pHSync_o": {
+        "ports": [
+          "normalizer_0/vid_pHSync_o",
+          "vert_avg_filter_0/vid_pHSync_i",
+          "normalizer_1/vid_pHSync_i"
+        ]
+      },
+      "normalizer_0_vid_pVDE_o": {
+        "ports": [
+          "normalizer_0/vid_pVDE_o",
+          "axis_data_fifo_1/s_axis_tvalid"
+        ]
+      },
+      "normalizer_0_vid_pVSync_o": {
+        "ports": [
+          "normalizer_0/vid_pVSync_o",
+          "vert_avg_filter_0/vid_pVSync_i"
+        ]
+      },
+      "normalizer_1_vid_pData_o": {
+        "ports": [
+          "normalizer_1/vid_pData_o",
+          "data_o_0"
+        ]
+      },
+      "normalizer_1_vid_pVDE_o": {
+        "ports": [
+          "normalizer_1/vid_pVDE_o",
+          "valid_o_0"
+        ]
+      },
+      "normalizer_1_vid_pVSync_o": {
+        "ports": [
+          "normalizer_1/vid_pVSync_o",
+          "vsync_gen_o_0"
+        ]
+      },
+      "resetn_1": {
+        "ports": [
+          "resetn",
+          "luminance_filter_0/resetn",
+          "axis_data_fifo_0/s_axis_aresetn",
+          "hor_avg_filter_0/resetn",
+          "axis_data_fifo_1/s_axis_aresetn",
+          "vert_avg_filter_0/resetn",
+          "normalizer_0/resetn",
+          "normalizer_1/resetn",
+          "constant_control_0/resetn",
+          "sub_image_filter_0/resetn"
+        ]
+      },
+      "sw_reset_0_1": {
+        "ports": [
+          "resetn_sub_image_filter",
+          "luminance_filter_0/sw_reset",
+          "hor_avg_filter_0/sw_reset",
+          "normalizer_0/sw_reset",
+          "normalizer_1/sw_reset",
+          "sub_image_filter_0/sw_reset"
+        ]
+      },
+      "top_left_x_0_1": {
+        "ports": [
+          "top_left_x_0",
+          "constant_control_0/top_left_x"
+        ]
+      },
+      "top_left_y_0_1": {
+        "ports": [
+          "top_left_y_0",
+          "constant_control_0/top_left_y"
+        ]
+      },
+      "update_0_1": {
+        "ports": [
+          "update_0",
+          "constant_control_0/update"
+        ]
+      },
+      "vert_avg_filter_0_data_o": {
+        "ports": [
+          "vert_avg_filter_0/data_o",
+          "normalizer_1/vid_pData_i"
+        ]
+      },
+      "vert_avg_filter_0_valid_o": {
+        "ports": [
+          "vert_avg_filter_0/valid_o",
+          "normalizer_1/vid_pVDE_i"
+        ]
+      },
+      "vert_avg_filter_0_vid_pReady_i": {
+        "ports": [
+          "vert_avg_filter_0/vid_pReady_i",
+          "axis_data_fifo_1/m_axis_tready"
+        ]
+      },
+      "vert_avg_filter_0_vsync_gen_o": {
+        "ports": [
+          "vert_avg_filter_0/vsync_gen_o",
+          "normalizer_1/vid_pVSync_i"
+        ]
+      }
+    }
+  }
+}

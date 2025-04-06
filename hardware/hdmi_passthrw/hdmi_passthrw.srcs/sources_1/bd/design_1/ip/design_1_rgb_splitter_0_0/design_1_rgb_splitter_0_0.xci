@@ -1,0 +1,119 @@
+{
+  "schema": "xilinx.com:schema:json_instance:1.0",
+  "ip_inst": {
+    "xci_name": "design_1_rgb_splitter_0_0",
+    "cell_name": "rgb_splitter_0",
+    "component_reference": "xilinx.com:module_ref:rgb_splitter:1.0",
+    "ip_revision": "1",
+    "gen_directory": "../../../../../../hdmi_passthrw.gen/sources_1/bd/design_1/ip/design_1_rgb_splitter_0_0",
+    "parameters": {
+      "component_parameters": {
+        "Component_Name": [ { "value": "design_1_rgb_splitter_0_0", "resolve_type": "user", "usage": "all" } ]
+      },
+      "project_parameters": {
+        "ARCHITECTURE": [ { "value": "artix7" } ],
+        "BASE_BOARD_PART": [ { "value": "digilentinc.com:nexys_video:part0:1.2" } ],
+        "BOARD_CONNECTIONS": [ { "value": "" } ],
+        "DEVICE": [ { "value": "xc7a200t" } ],
+        "PACKAGE": [ { "value": "sbg484" } ],
+        "PREFHDL": [ { "value": "VERILOG" } ],
+        "SILICON_REVISION": [ { "value": "" } ],
+        "SIMULATOR_LANGUAGE": [ { "value": "MIXED" } ],
+        "SPEEDGRADE": [ { "value": "-1" } ],
+        "STATIC_POWER": [ { "value": "" } ],
+        "TEMPERATURE_GRADE": [ { "value": "" } ]
+      },
+      "runtime_parameters": {
+        "IPCONTEXT": [ { "value": "IP_Integrator" } ],
+        "IPREVISION": [ { "value": "1" } ],
+        "MANAGED": [ { "value": "TRUE" } ],
+        "OUTPUTDIR": [ { "value": "../../../../../../hdmi_passthrw.gen/sources_1/bd/design_1/ip/design_1_rgb_splitter_0_0" } ],
+        "SELECTEDSIMMODEL": [ { "value": "" } ],
+        "SHAREDDIR": [ { "value": "../../ipshared" } ],
+        "SWVERSION": [ { "value": "2023.2" } ],
+        "SYNTHESISFLOW": [ { "value": "OOC_HIERARCHICAL" } ]
+      }
+    },
+    "boundary": {
+      "ports": {
+        "vid_pData_i": [ { "direction": "in", "size_left": "23", "size_right": "0" } ],
+        "vid_pHSync_i": [ { "direction": "in" } ],
+        "vid_pVSync_i": [ { "direction": "in" } ],
+        "vid_pVDE_i": [ { "direction": "in" } ],
+        "vid_pData_o1": [ { "direction": "out", "size_left": "23", "size_right": "0" } ],
+        "vid_pHSync_o1": [ { "direction": "out" } ],
+        "vid_pVSync_o1": [ { "direction": "out" } ],
+        "vid_pVDE_o1": [ { "direction": "out" } ],
+        "vid_pData_o2": [ { "direction": "out", "size_left": "23", "size_right": "0" } ],
+        "vid_pHSync_o2": [ { "direction": "out" } ],
+        "vid_pVSync_o2": [ { "direction": "out" } ],
+        "vid_pVDE_o2": [ { "direction": "out" } ],
+        "vid_pData_o3": [ { "direction": "out", "size_left": "23", "size_right": "0" } ],
+        "vid_pHSync_o3": [ { "direction": "out" } ],
+        "vid_pVSync_o3": [ { "direction": "out" } ],
+        "vid_pVDE_o3": [ { "direction": "out" } ],
+        "vid_pData_o4": [ { "direction": "out", "size_left": "23", "size_right": "0" } ],
+        "vid_pHSync_o4": [ { "direction": "out" } ],
+        "vid_pVSync_o4": [ { "direction": "out" } ],
+        "vid_pVDE_o4": [ { "direction": "out" } ]
+      },
+      "interfaces": {
+        "RGB_i": {
+          "vlnv": "xilinx.com:interface:vid_io:1.0",
+          "abstraction_type": "xilinx.com:interface:vid_io_rtl:1.0",
+          "mode": "slave",
+          "port_maps": {
+            "DATA": [ { "physical_name": "vid_pData_i" } ],
+            "ACTIVE_VIDEO": [ { "physical_name": "vid_pVDE_i" } ],
+            "HSYNC": [ { "physical_name": "vid_pHSync_i" } ],
+            "VSYNC": [ { "physical_name": "vid_pVSync_i" } ]
+          }
+        },
+        "RGB1_o": {
+          "vlnv": "xilinx.com:interface:vid_io:1.0",
+          "abstraction_type": "xilinx.com:interface:vid_io_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "DATA": [ { "physical_name": "vid_pData_o1" } ],
+            "ACTIVE_VIDEO": [ { "physical_name": "vid_pVDE_o1" } ],
+            "HSYNC": [ { "physical_name": "vid_pHSync_o1" } ],
+            "VSYNC": [ { "physical_name": "vid_pVSync_o1" } ]
+          }
+        },
+        "RGB2_o": {
+          "vlnv": "xilinx.com:interface:vid_io:1.0",
+          "abstraction_type": "xilinx.com:interface:vid_io_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "DATA": [ { "physical_name": "vid_pData_o2" } ],
+            "ACTIVE_VIDEO": [ { "physical_name": "vid_pVDE_o2" } ],
+            "HSYNC": [ { "physical_name": "vid_pHSync_o2" } ],
+            "VSYNC": [ { "physical_name": "vid_pVSync_o2" } ]
+          }
+        },
+        "RGB3_o": {
+          "vlnv": "xilinx.com:interface:vid_io:1.0",
+          "abstraction_type": "xilinx.com:interface:vid_io_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "DATA": [ { "physical_name": "vid_pData_o3" } ],
+            "ACTIVE_VIDEO": [ { "physical_name": "vid_pVDE_o3" } ],
+            "HSYNC": [ { "physical_name": "vid_pHSync_o3" } ],
+            "VSYNC": [ { "physical_name": "vid_pVSync_o3" } ]
+          }
+        },
+        "RGB4_o": {
+          "vlnv": "xilinx.com:interface:vid_io:1.0",
+          "abstraction_type": "xilinx.com:interface:vid_io_rtl:1.0",
+          "mode": "master",
+          "port_maps": {
+            "DATA": [ { "physical_name": "vid_pData_o4" } ],
+            "ACTIVE_VIDEO": [ { "physical_name": "vid_pVDE_o4" } ],
+            "HSYNC": [ { "physical_name": "vid_pHSync_o4" } ],
+            "VSYNC": [ { "physical_name": "vid_pVSync_o4" } ]
+          }
+        }
+      }
+    }
+  }
+}
