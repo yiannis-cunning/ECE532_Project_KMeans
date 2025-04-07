@@ -10,6 +10,8 @@ In this repository there are four main folders.
 		- Resizer IP and source code
 	- k-Means
 		- K-Means IP and source code
+	- box_control
+		- box control IP and source code
 3. Scripts
 	- Png <-> hex file conversions 
 4. Software
