@@ -12,6 +12,8 @@ In this repository there are four main folders.
 		- K-Means IP and source code
 	- box_control
 		- box control IP and source code
+	- static binning
+		- static binning/resizing IP and source code
 3. Scripts
 	- Png <-> hex file conversions 
 4. Software
